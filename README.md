@@ -1,38 +1,59 @@
 # The Last Light
 
-A serialized original story universe — no build step, no framework, no dependencies. Vanilla HTML/CSS/JS.
+A premium serialized original story universe delivered as a lightweight static digital comic. No build step, no framework, no server required.
 
 > When the last light goes out, the story begins.
 
-## Structure
-```
+## Overview
+
+The Last Light is a season-based digital comic built as a lightweight static site.
+
+Eighty-three years since the last natural nightfall, a Lumen signal technician hears something the network insists is not there.
+
+## Story
+
+Season One, Episode 01 — *The Night That Remembered*: District Nine signal technician Mara Vale keeps flagging an anomaly Lumen keeps denying. Then, for the first time in eighty-three years, the lights go out.
+
+## Technology
+
+- HTML, CSS, vanilla JavaScript, inline SVG
+- Single reusable reader engine (`app.js`) — every episode is data, not code
+- No build tooling
+- No dependencies
+- Static hosting compatible
+
+## Project Structure
+
+```text
 index.html                          Landing page
-app.js                              Episode data model + reader/nav logic
-styles.css                          Site-wide stylesheet
+app.js                              Reader engine + episode data
+styles.css                          Site-wide design system
 manifest.webmanifest                PWA manifest
 favicon.svg                         Site favicon
+
 episodes/season-1/episode-XX/       One folder per episode
-  index.html                        Reader page (published episodes only)
-  README.md                         Production tracking doc for that episode
-universe/story-bible.md             Locked canon, characters, world chain, open threads
-docs/roadmap.md                     Version roadmap
-docs/art-direction.md               Palette, tone, panel-art pipeline, naming rules
-docs/qa-checklist.md                Pre-publish checklist per episode
-```
+  index.html                        Reader page
+  README.md                         Production tracking document
 
-## Adding a new episode
-1. Write the episode's `README.md` in `episodes/season-1/episode-XX/` (outline → full production doc).
-2. Add the episode's panel content to the `EPISODES` array in `app.js`.
-3. Set `status: "published"`.
-4. Create `episodes/season-1/episode-XX/index.html` — copy `episode-01/index.html` and change the episode number passed to `LastLight.renderReader(N)` and the page `<title>`/meta description.
-5. Update `/universe/story-bible.md` with any new canon.
-6. Run through `/docs/qa-checklist.md` before publishing.
+assets/                             Artwork and production assets
+  art/season-1/episode-01/         Episode artwork
+  characters/                       Character assets
+  locations/                        Location assets
+  icons/                            Interface icons
+  logos/                            Branding assets
+  social/                           Social/media assets
+  textures/                         Texture assets
 
-No other files need to change — the landing page's season list and the reader's prev/next navigation are both derived from the `EPISODES` array automatically.
+docs/                               Production and universe documentation
+  art-direction.md                 Palette, tone, panel-art pipeline, naming rules
+  characters.md                    Character reference
+  midjourney-prompts.md            Episode artwork prompt set
+  production.md                    Production notes
+  season-01.md                     Season roadmap and publication status
+  universe.md                      Universe reference
 
-## Local preview
-No build step required. Serve the folder with any static server, e.g.:
-```
-npx serve .
-```
-or open `index.html` directly in a browser (note: `fetch`-based features, if added later, will require a server due to CORS on `file://`).
+universe/                           Locked story canon
+  story-bible.md                    Characters, world chain, canon, open threads
+
+robots.txt                           Search-engine crawler directives
+sitemap.xml                          Search-engine sitemap
