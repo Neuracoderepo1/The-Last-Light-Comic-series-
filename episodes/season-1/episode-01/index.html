@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Night That Remembered — The Last Light</title>
+<meta name="description" content="Episode 01 of The Last Light. A Lumen signal technician hears something the network insists is not there.">
+<meta property="og:title" content="The Night That Remembered — The Last Light">
+<meta property="og:description" content="A Lumen signal technician hears something the network insists is not there.">
+<meta property="og:type" content="article">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../../../manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav" aria-label="Primary">
+  <a class="nav-mark" href="../../../index.html">THE LAST LIGHT</a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+      <path d="M0 1H18M0 7H18M0 13H18" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  </button>
+  <ul class="nav-links">
+    <li><a href="../../../index.html#story">Story</a></li>
+    <li><a href="../../../index.html#characters">Characters</a></li>
+    <li><a href="../../../index.html#world">World</a></li>
+    <li><a href="../../../index.html#season">Season 01</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+  <section class="section" style="padding-top:150px;">
+    <div class="container reader">
+      <div class="reader-meta">
+        <span>Season 01 &middot; Episode 01</span>
+        <span>Nova City</span>
+      </div>
+      <h1 class="reader-title" data-reader-title>The Night That Remembered</h1>
+
+      <div data-reader aria-live="polite"></div>
+
+      <div class="reader-loop">
+        <p class="reader-loop-line">Somewhere beyond the light, something is awake.</p>
+        <div class="reader-loop-actions">
+          <a class="btn btn-ghost" href="index.html" onclick="location.reload();return false;">Read Again</a>
+          <a class="btn btn-primary" data-nav-next href="#">Next Chapter</a>
+        </div>
+      </div>
+
+      <nav class="reader-nav" aria-label="Episode navigation">
+        <a data-nav-prev href="#">&larr; Season Start</a>
+        <a href="../../../index.html#season">All Episodes</a>
+        <a data-nav-next href="#">Next &rarr;</a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>&copy; 2026 The Last Light. An original story universe.</span>
+    <ul class="footer-links">
+      <li><a href="../../../universe/character-bible.md">Characters</a></li>
+      <li><a href="../../../index.html">Home</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="../../../app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    LastLight.renderReader(1);
+  });
+</script>
+</body>
+</html>

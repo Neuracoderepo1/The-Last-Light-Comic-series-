@@ -1,0 +1,16 @@
+{
+  "name": "The Last Light",
+  "short_name": "Last Light",
+  "description": "When the last light goes out, the story begins.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#07090d",
+  "theme_color": "#07090d",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
